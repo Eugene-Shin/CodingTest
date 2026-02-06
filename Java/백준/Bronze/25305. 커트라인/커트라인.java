@@ -22,9 +22,10 @@ public class Main {
                 int key = arr[i];
                 for(int j = i; j > 0; j--) {
                     if(arr[j - 1] < key) {
-                        int temp = arr[j];
                         arr[j] = arr[j - 1];
-                        arr[j - 1] = temp;
+                        if(j == 1) {
+                            arr[0] = key;
+                        }
                     } else {
                         arr[j] = key;
                         break;

@@ -54,7 +54,7 @@ public class Main {
         visited[start] = true;
         
         while(!queue.isEmpty()) {
-            int u = queue.pollLast();
+            int u = queue.pollFirst();
             
             for(int v : graph[u]) {
                 if(!visited[v]) {

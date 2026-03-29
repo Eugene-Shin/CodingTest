@@ -29,7 +29,7 @@ public class Main {
             
             long count = 0;
             //if(remainder[0] >= 1)
-                count += remainder[0] + (long)remainder[0] * (remainder[0] - 1) / 2;
+                count += (long)remainder[0] * (remainder[0] + 1) / 2;
             for(int i = 1; i < M; i++) {
                 if(remainder[i] >= 2)    count += (long)remainder[i] * (remainder[i] - 1) / 2;
             }

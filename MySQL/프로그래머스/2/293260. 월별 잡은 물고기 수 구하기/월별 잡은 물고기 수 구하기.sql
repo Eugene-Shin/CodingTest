@@ -1,0 +1,5 @@
+SELECT COUNT(*) AS fish_count, EXTRACT(MONTH FROM time) AS month
+FROM fish_info
+GROUP BY EXTRACT(MONTH FROM time)
+HAVING COUNT(*) > 0
+ORDER BY month ASC;
